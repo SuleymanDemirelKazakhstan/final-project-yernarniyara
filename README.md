@@ -1,7 +1,7 @@
 # CSS 410 Research tools and methods
 ## Team members
 + **Niyara Muradova** - Backend Developer (GitHub account: *niyara-muradova*)
-+ **Yernar Aimagambetov** - Frontend Developer (GitHub account: *jackychan*)
++ **Yernar Aimagambetov** - Frontend Developer (GitHub account: *ynr1434*)
 
 ![Main Introduction for Interface](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Disp-3.png)
 
