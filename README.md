@@ -21,5 +21,9 @@ In our project we use:
  -  **Figma** design and wireframe templates for app MVP
  -  **Swift**  for application and frontend in order to create client sided app 
  -  **Arduino UNO**  main controller for the prototype of the IOT system
-
+ 
+ 
+## Interface design
+![Main Introduction for Interface]
+(https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Disp-3.png)
  
