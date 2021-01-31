@@ -24,6 +24,5 @@ In our project we use:
  
  
 ## Interface design
-![Main Introduction for Interface]
-(https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Disp-3.png)
+![Main Introduction for Interface](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Disp-3.png)
  
