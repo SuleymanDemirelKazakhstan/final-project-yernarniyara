@@ -3,8 +3,6 @@
 + **Niyara Muradova** - Backend Developer (GitHub account: *niyara-muradova*)
 + **Yernar Aimagambetov** - Frontend Developer (GitHub account: *ynr1434*)
 
-![Main Introduction for Interface](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Disp-3.png)
-
 ## Project
 The main goal is to design IOT system for health care system in order to upgrade and improve blood donation system in Kazakhstan. The system will help blood donation centers to find donors and track the donation process. Donor will be able to receive bonuses for each donation which they can spend on their medical analysises and medication.
 The impact will be enourmous which will improve donor system in Kazakhstam and encourage people to donate blood.
