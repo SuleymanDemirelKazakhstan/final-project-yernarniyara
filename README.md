@@ -6,49 +6,41 @@
 ![Main Introduction for Interface](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Disp-3.png)
 
 ## Project
-The main goal is to design IOT system for health care system in order to upgrade and improve current situation in our country. The system will be automated with Arduino and helping programming technologies so that to create connected system and prototype for a huge project.
-The impact will be enourmous, prices for the project will cost 5 times cheaper than existing technologies abroad.
-IOT system needs such controllers as:
- - temprature controllers for laboratories and refrigirating cameras. This will be useful and new because we will provide remote access to temprature;
- - light controllers at operating rooms and hospital in general. Sometimes there is an electricity issue at the hospitals. The remaining time to turn on extra power is about 5 to 8 minutes. Our system will provide less than 1 minute turning of the light system;
- - gas and other extremely dangerous particles in the air. It may cause serious issues for patients and workers at hospitals;
- - controlling cancer patients treatment through online system, which will allow them less time spending at the hospitals and even more effective treatments;
- - all of the solutions require advanced database connections and good architecture for frontend API development;
- - design structure for simple and useful application, which will be made using our UX researches
+The main goal is to design IOT system for health care system in order to upgrade and improve blood donation system in Kazakhstan. The system will help blood donation centers to find donors and track the donation process. Donor will be able to receive bonuses for each donation which they can spend on their medical analysises and medication.
+The impact will be enourmous which will improve donor system in Kazakhstam and encourage people to donate blood.
 
 
 ## Technologies
 In our project we use:
- - **Python3** to develop backend  API for the Arduino platform
+ - **Python3** to develop backend  API in order to track people, add new calculations for databases.
  -  **Figma** design and wireframe templates for app MVP
- -  **Swift**  for application and frontend in order to create client sided app 
- -  **Arduino UNO**  main controller for the prototype of the IOT system
+ -  **Frontend**  for application and frontend in order to create client sided app 
+ -  **Database on PsstgreSQL** database will store all of the information about donors and blood donations.
  
+ ## Goals of the Donor project
+  - Improve blood donation system in Kazakhstan
+  - Provide better advertising for blood donation
+  - Encourage young people to donate blood
+  - Solving the lack of blood problem in medical institutions 
+  - Develop modern and simple version for workers in healthcare
+  
+  ## User Personas
+  Primary types of users are young people at the age from 18 to 35, who have strong health and ability to donate blood.
+  Other user from the age 36 are required to have health lifestyle and whose medical issues doesn't cause inability to donate.
+  
+  Characteristics for users:
+  Age - from 18 to 35
+  Location - Almaty
+  Gender - both female and male
+  Education - doesn't matter
+  
+  Also there will be users from medical institutions, who will use admin panel in order to control and evaluate blood donation.
+  
+  ## User Stories
+  - As a donor, I want to see all of my donations and be able to track my achievemnts in a bonus system
+  - As a donor, I want to use both website and application for easier access to data
+  - As a medical center I want to see what blood we have in our bank and what types we need
+  - As a medical center, I want to track statictics and users that were donating blood in our center
  
-## Interface design
- - Introduction needs simple and eye-catching design for a regular app user in order to be rememebered\
- ![INTRO](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Splash%20Screen.png)\
- \
- - Dashboard is main page of the application, which has all of the needed information as a short portion of description\
- ![dashboard](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Dashboard.png)\
- \
- - Usage statistics shows information about current situation and based on the statistical information from the sensors analytical calculations will be made.\
- ![usage](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Usage.png)\
- \
-  - Control page allows user to interact with each and every device and sensor located\
-  ![control](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Control.png)\
-  \
-  - Second control page has temprature calculations during sime periods of time\
-  ![secondcontrol](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Control%202.png)\
-  \
-  - At the all appliances pages you may find all of the devices currently connected to the system. It allows to control them from one button click.\
-  ![appliance](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/All%20Appliances.png)\
-\
- - If some new device is being connected at the page add appliance you may find and connect to your main system\
- ![connectappliance](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Add%20Appliance.png)\
- \
- - Timer page automatically monitors timing that was set and controls lights everywhere.\
- ![timer](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Timer.png)\
-\
-![Finishing](https://github.com/SuleymanDemirelKazakhstan/final-project-yernarniyara/blob/main/Interface%20Examples/Disp-7.png)\
+  
  
