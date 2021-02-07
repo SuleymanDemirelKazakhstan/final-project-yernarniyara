@@ -4,7 +4,7 @@
 + **Yernar Aimagambetov** - Frontend Developer (GitHub account: *ynr1434*)
 
 ## Project
-The main goal is to design IOT system for health care system in order to upgrade and improve blood donation system in Kazakhstan. The system will help blood donation centers to find donors and track the donation process. Donor will be able to receive bonuses for each donation which they can spend on their medical analysises and medication.
+The main goal is to design a system for health care system in order to upgrade and improve blood donation system in Kazakhstan. The system will help blood donation centers to find donors and track the donation process. Donor will be able to receive bonuses for each donation which they can spend on their medical analysises and medication.
 The impact will be enourmous which will improve donor system in Kazakhstam and encourage people to donate blood.
 
 
