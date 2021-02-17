@@ -19,6 +19,23 @@
 | Tables with database of donors <br/> /tables | 1. Table of current donors in particular institution <br/> 2. Overall donors <br/> 3. Potential donors to send requests to   |
 |  List of needed blood <br/> /inneed | 1. Graph with currently available blood <br/> 2. Graph with blood that blood donation center currently needs  |
 
+## Page Description for admin-institution-panel
+All of the medical-institution-panel fields plus extra information
+| Page | Description  |
+|---|---|
+| Characteristics for potential donors <br/> /potential-donors-characteristics | 1. Table with potential donors and their blood|
+| Tables with number of used bonuses for medical instituion <br/> /bonuses | 1. Table of currently used bonuses <br/> 2. Bonuses overall number in graph|
+| Approving waitlist for registered medical institution workers <br/> /to-approve-workers | 1. Table with workers who are waiting access to create a new account  |
+| Table with currently approved people <br/> /approved-workers | 1. Table with workers who are currently working using the system  |
+
+## Page description for superuser-panel
+| Page | Description  |
+|---|---|
+|Homepage/Dashboard <br/> /dashboard-superuser | 1. Number of donors in all institutions in Chart <br/> 2. Total number of donors per day/week/month|
+| Tables with database of donors <br/> /tables | 1. Table of current donors in all institutions |
+| Tables with database of medical workers by instituions <br/> /tables | 1. Table of current workers sorted by a medical institution |
+
+
 ## Work done during Week3
  - Developed structure for the website pages\
  - Decided which Python packages we will use: Django, Jinja2\
