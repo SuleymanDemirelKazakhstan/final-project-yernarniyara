@@ -1,3 +1,6 @@
+## Mindmap
+ https://miro.com/app/board/o9J_lTqjWQU=/
+
 ## Risks\
  - The PWA part of the application may e hard to code and there might be difficulties to adapt it to all smartphones \
  - There might be difficulties in providing our system to a medical institution\
