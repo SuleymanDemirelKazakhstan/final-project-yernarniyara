@@ -12,15 +12,12 @@
  - The application must have a PWA version of a website in order to easily use it on a smartphones as an app\
  - The application must support approximately 500 users simultaneously\
 
-## Page Description for Admin-panel
+## Page Description for medical-institution-panel
 | Page | Description  |
 |---|---|
-|Homepage/Dashboard | 1. <br/> 2.  <br/> 3.|
-|   |   |
-|   |   |
-|   |   |
-|   |   |
-|   |   |
+|Homepage/Dashboard <br/> /dashboard | 1. Number of donors in current institution in Chart <br/> 2. Total number of donors per day/week/month|
+| Tables with database of donors <br/> /tables | 1. Table of current donors in particular institution <br/> 2. Overall donors <br/> 3. Potential donors to send requests to   |
+|  List of needed blood <br/> /inneed | 1. Graph with currently available blood <br/> 2. Graph with blood that blood donation center currently needs  |
 
 ## Work done during Week3
  - Developed structure for the website pages\
