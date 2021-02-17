@@ -12,6 +12,14 @@
  - The application must have a PWA version of a website in order to easily use it on a smartphones as an app\
  - The application must support approximately 500 users simultaneously\
 
+## Page Description for donors
+| Page | Description  |
+|---|---|
+|Main Page <br/> /home | 1. Logo Branding <br/> 2. Categories on site <br/> 3. Login <br/> 4. Beautiful Illustration <br/> 5. Advantages of blood donation <br/> 6. Examples of bonuses and achievements <br/> 7. Instructions |
+| Login Page <br/> /login | 1. Login and Password fields <br/> 2. Login button <br/> 3. Forgot password <br/> 4. Register if no account  |
+|  Registration <br/> /registration | 1. Information insert <br/>  |
+|  Profile Page <br/> /profile | 1. Last blood donation <br/> 2. User card with all info <br/> 3. Last blood analysis  |
+
 ## Page Description for medical-institution-panel
 | Page | Description  |
 |---|---|
