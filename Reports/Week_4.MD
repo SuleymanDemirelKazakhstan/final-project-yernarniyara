@@ -15,7 +15,7 @@
 ## Page Description for Admin-panel
 | Page | Description  |
 |---|---|
-|Homepage/Dashboard | 1. / 2. / 3.|
+|Homepage/Dashboard | 1. <br/> 2.  <br/> 3.|
 |   |   |
 |   |   |
 |   |   |
