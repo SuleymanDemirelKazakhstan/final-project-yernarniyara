@@ -1,0 +1,16 @@
+version: '3'
+volumes:
+  anketa_db_vol:
+
+services:
+  postgres:
+    image: postgres:12
+    volumes:
+      - anketa_db_vol:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_HOST=localhost
+      - POSTGRES_PASSWORD=admin123
+      - POSTGRES_DB=donor_project
+    ports:
+      - "8432:5432"
+    restart: always
