@@ -6,9 +6,12 @@
 ## More information could be found by the following link
 https://www.notion.so/niyara/Donor-Project-82f149cc83e847588765a31967366190
 
+##Design system for the interface
+https://www.figma.com/file/gMmR6K7jVHlbqvoWKi9fBW/Donation-Project
+
 ## Project
-The main goal is to design a system for health care system in order to upgrade and improve blood donation system in Kazakhstan. The system will help blood donation centers to find donors and track the donation process. Donor will be able to receive bonuses for each donation which they can spend on their medical analysises and medication.
-The impact will be enourmous which will improve donor system in Kazakhstam and encourage people to donate blood.
+The main goal is to design a system for health care system in order to upgrade and improve blood donation system in Kazakhstan. The system will help blood donation centers to find donors and track the donation process. Donor will be able to receive bonuses for each donation which they can spend on their medical analysis and medication.
+The impact will be enormous which will improve donor system in Kazakhstan and encourage people to donate blood.
 
 
 ## Technologies
@@ -35,13 +38,9 @@ In our project we use:
   Gender - both female and male
   Education - doesn't matter
   
-  Also there will be users from medical institutions, who will use admin panel in order to control and evaluate blood donation.
-  
   ## User Stories
-  - As a donor, I want to see all of my donations and be able to track my achievemnts in a bonus system
+  - As a donor, I want to see all of my donations and be able to track my achievements in a bonus system
   - As a donor, I want to use both website and application for easier access to data
-  - As a medical center I want to see what blood we have in our bank and what types we need
-  - As a medical center, I want to track statictics and users that were donating blood in our center
  
   
  
