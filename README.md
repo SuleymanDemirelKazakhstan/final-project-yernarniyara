@@ -1,7 +1,7 @@
 # CSS 410 Research tools and methods
 ## Team members
 + **Niyara Muradova** - Backend Developer (GitHub account: *niyara-muradova*)
-+ **Yernar Aimagambetov** - Frontend Developer (GitHub account: *ynr1434*)
++ **Yernar Aimagambetov** - UX/UI Designer (GitHub account: *ynr1434*)
 
 ## More information could be found by the following link
 https://www.notion.so/niyara/Donor-Project-82f149cc83e847588765a31967366190
