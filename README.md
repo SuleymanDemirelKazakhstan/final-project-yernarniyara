@@ -1,6 +1,6 @@
 # CSS 410 Research tools and methods
 ## Team members
-+ **Niyara Muradova** - Backend Developer (GitHub account: *niyara-muradova*)
++ **Niyara Muradova** - Full-stack Developer (GitHub account: *niyara-muradova*)
 + **Yernar Aimagambetov** - UX/UI Designer (GitHub account: *ynr1434*)
 
 ## More information could be found by the following link
