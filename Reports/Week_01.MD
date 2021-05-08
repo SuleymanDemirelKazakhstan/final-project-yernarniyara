@@ -8,7 +8,7 @@
 \f0\fs24 \cf0 # CSS 410 Research tools and methods\
 ## Team members\
 + **Niyara Muradova** - Backend Developer (GitHub account: *niyara-muradova*)\
-+ **Yernar Aimagambetov** - Frontend Developer (GitHub account: *ynr1434*)\
++ **Yernar Aimagambetov** - UX/UI Designer (GitHub account: *ynr1434*)\
 \
 ## Project\
 The main goal is to design a system for health care system in order to upgrade and improve blood donation system in Kazakhstan. The system will help blood donation centers to find donors and track the donation process. Donor will be able to receive bonuses for each donation which they can spend on their medical analysises and medication.\
