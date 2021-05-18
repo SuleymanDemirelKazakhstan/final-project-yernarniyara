@@ -3,6 +3,9 @@
 + **Niyara Muradova** - Full-stack Developer (GitHub account: *niyara-muradova*)
 + **Yernar Aimagambetov** - UX/UI Designer (GitHub account: *ynr1434*)
 
+## Deployed on server code
+http://91.201.215.24:5000/
+
 ## More information could be found by the following link
 https://www.notion.so/niyara/Donor-Project-82f149cc83e847588765a31967366190
 
