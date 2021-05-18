@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Preloader -->
+    <div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+    <!-- Preloader END -->
+
+
+    <!-- Main container -->
+    <div class="page-container">
+
+    {% include 'submenu-logged-in.html' %}
+
+
+        <!-- bloc-4 -->
+        <div class="bloc bg-Vector-2031 bgc-white-2 tc-rose-quartz" id="bloc-4">
+            <div class="container bloc-lg">
+                {% if donor_data['type'] != 'init_data' %}
+                    <div class="row">
+
+                        {% include 'left-side-profile.html' %}
+
+                        <div class="col-sm-8 col order-2 offset--1">
+                            <div class="row">
+                                <div class="col profile-block margin-tabs">
+                                    <ul class="nav nav-tabs" id="nav-13890-tab" role="tablist">
+{#                                        <li class="nav-item">#}
+{#                                            <a class="a-btn nav-link active tab-headings" id="nav-13890-tab-1" data-toggle="tab" href="#nav-13890-content-1" role="tab" aria-controls="nav-13890-content-1" aria-selected="true">Прошедшие сдачи</a>#}
+{#                                        </li>#}
+                                        <li class="nav-item">
+                                            <a class="a-btn nav-link tab-headings" id="nav-13890-tab-2" data-toggle="tab" href="#nav-13890-content-2" role="tab" aria-controls="nav-13890-content-2" aria-selected="false">Текущая запись</a>
+                                        </li>
+{#                                        <li class="nav-item">#}
+{#                                            <a class="a-btn nav-link tab-headings" id="nav-13890-tab-3" data-toggle="tab" href="#nav-13890-content-3" role="tab" aria-controls="nav-13890-content-3" aria-selected="false">Ближайшая возможная запись</a>#}
+{#                                        </li>#}
+                                    </ul>
+                                    <div class="tab-content">
+{#                                        <div style="background-color: transparent" class="tab-pane fade show active" id="nav-13890-content-1" role="tabpanel" aria-labelledby="nav-13890-content-1">#}
+{#                                            <div class="row">#}
+{#                                                <div class="col border-date">#}
+{#                                                    <h3 class="mg-md">#}
+{#                                                        <span class="far fa-calendar-alt icon-radical-red-2"></span> <span class="date-number">14</span> <span class="date-text-colour">октября</span><br>#}
+{#                                                    </h3>#}
+{#                                                    <p class="padding-address-block7">#}
+{#                                                        Адрес: Бухар-Жырау 47#}
+{#                                                    </p>#}
+{#                                                    <p class="p-bloc-7-style padding-address-block7 margin-bootim-achieved-points">#}
+{#                                                        Заработано: <span class="text-span-achievedpoints">600</span>#}
+{#                                                    </p>#}
+{#                                                </div>#}
+{#                                                <div class="col border-date">#}
+{#                                                    <h3 class="mg-md">#}
+{#                                                        <span class="far fa-calendar-alt icon-radical-red-2"></span> <span class="date-number">14</span> <span class="date-text-colour">октября</span>#}
+{#                                                    </h3>#}
+{#                                                    <p class="padding-address-block7">#}
+{#                                                        Адрес: Бухар-Жырау 47#}
+{#                                                    </p>#}
+{#                                                    <p class="p-bloc-7-style padding-address-block7 margin-bootim-achieved-points">#}
+{#                                                        Заработано: <span class="text-span-achievedpoints">600</span>#}
+{#                                                    </p>#}
+{#                                                </div>#}
+{#                                                <div class="col border-date">#}
+{#                                                    <h3 class="mg-md">#}
+{#                                                        <span class="far fa-calendar-alt icon-radical-red-2"></span> <span class="date-number">14</span> <span class="date-text-colour">октября</span><br>#}
+{#                                                    </h3>#}
+{#                                                    <p class="padding-address-block7">#}
+{#                                                        Адрес: Бухар-Жырау 47#}
+{#                                                    </p>#}
+{#                                                    <p class="p-bloc-7-style padding-address-block7 margin-bootim-achieved-points">#}
+{#                                                        Заработано: <span class="text-span-achievedpoints">600</span>#}
+{#                                                    </p>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+                                        <div style="background-color: transparent" class="tab-pane fade-tab-bs" id="nav-13890-content-2" role="tabpanel" aria-labelledby="nav-13890-content-2">
+                                            <div class="row future-app-border">
+                                                <div class="col-lg-6">
+                                                    <h6 class="mg-md future-date-appointment">
+                                                        <span class="far fa-calendar-alt icon-radical-red-2"></span>&nbsp; &nbsp; &nbsp;{{ latest_appointment[0].date_time }}
+                                                    </h6>
+                                                </div>
+                                                <div class="col">
+                                                    <p>
+                                                        Место: {{ latest_appointment[1].name }}
+                                                    </p><a href="{{ url_for('appointment') }}" class="a-btn a-block ltc-radical-red">Изменить запись<br></a>
+                                                </div>
+                                            </div>
+                                        </div>
+{#                                        <div style="background-color: transparent" class="tab-pane fade-tab-bs future-app-border" id="nav-13890-content-3" role="tabpanel" aria-labelledby="nav-13890-content-3">#}
+{#                                            <div class="row available-soon">#}
+{#                                                <div class="col-lg-6 align-self-start">#}
+{#                                                    <h6 class="mg-md future-date-appointment h6-bloc-7-style">#}
+{#                                                        <span class="far fa-calendar-alt icon-radical-red-2"></span>&nbsp;Возможная ближайшая запись<br>#}
+{#                                                    </h6>#}
+{#                                                </div>#}
+{#                                                <div class="col">#}
+{#                                                    <h2 class="mg-md tc-radical-red">#}
+{#                                                        14 июня 2021#}
+{#                                                    </h2><a href="{{ url_for('appointment') }}" class="btn btn-lg btn-6-style btn-radical-red">Записаться<br></a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col offset-lg--1 profile-block margin-tabs bgc-white-3">
+                                    <ul class="nav nav-tabs" id="nav-34725-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="a-btn nav-link active tab-headings" id="nav-34725-tab-1" data-toggle="tab" href="#nav-34725-content-1" role="tab" aria-controls="nav-34725-content-1" aria-selected="true">Последние показатели</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div style="background-color: transparent" class="tab-pane fade-tab-bs show active" id="nav-34725-content-1" role="tabpanel" aria-labelledby="nav-34725-content-1">
+                                            <div class="row table-imitation row-bloc-7-style bgc-white-4">
+                                                <div class="col-lg-4">
+                                                    <p class="mg-md paragraph-table colours-table-header">
+                                                        Название
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table colours-table-header">
+                                                        Показатели
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table colours-table-header">
+                                                        Норма
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row table-imitation bgc-white-2 row-bloc-7-style">
+                                                <div class="col-lg-4">
+                                                    <p class="mg-md paragraph-table">
+                                                        Гемоглобин (Hb)
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table p-19-style">
+                                                        135
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table p-19-style">
+                                                        135
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row table-imitation bgc-white-2 row-bloc-7-style">
+                                                <div class="col-lg-4">
+                                                    <p class="mg-md paragraph-table">
+                                                        Лейкоциты&nbsp;(Hb)
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table p-21-style">
+                                                        135
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table p-21-style">
+                                                        135
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row table-imitation bgc-white-2 row-bloc-7-style">
+                                                <div class="col-lg-4">
+                                                    <p class="mg-md paragraph-table">
+                                                        Глюкоза&nbsp;(Hb)
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table p-23-style">
+                                                        135
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table p-23-style">
+                                                        135
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row table-imitation bgc-white-2 row-bloc-7-style">
+                                                <div class="col-lg-4">
+                                                    <p class="mg-md paragraph-table">
+                                                        Общий билирубин&nbsp;(Hb)
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table p-25-style">
+                                                        23
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <p class="mg-md paragraph-table p-25-style">
+                                                        23
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                        {% include 'if-profile-not-filled.html' %}
+                    {% endif %}
+            </div>
+        </div>
+        <!-- bloc-4 END -->
+
+
+    </div>
+    <!-- Main container END -->
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
+
+
+<!-- Main container -->
+<div class="page-container">
+
+{% include 'submenu-logged-in.html' %}
+
+<!-- bloc-7 -->
+<div class="bloc bg-Vector-2031 bgc-white-2 tc-dark-raspberry l-bloc" id="bloc-7">
+	<div class="container bloc-lg">
+		<div class="row">
+
+            {% include 'left-menu-edit-profile.html' %}
+
+			<div class="col-sm-8 col order-2 offset--1">
+				<div class="row">
+					<div class="col profile-block margin-tabs bgc-white-2">
+						<h3 class="mg-md p-heading-edit-profile">
+							Полные данные
+						</h3>
+						<div class="row row-41-style">
+							<div class="col-lg-12">
+                                <form action="{{ url_for('edit_fullprofile') }}" method="POST">
+                                    <div>
+                                        <label>
+                                            Рост (в см)<br>
+                                        </label>
+                                        <input class="form-control" type="number" name="height" value="{{ donor_data['medical_data']['height'] }}" required/>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            Вес (в кг)<br>
+                                        </label>
+                                        <input class="form-control" type="number" name="weight" value="{{ donor_data['medical_data']['weight'] }}" required/>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            Группа крови<br>
+                                        </label>
+                                        <div class="form-group">
+                                            <select class="form-control" name="blood_type">
+                                                <option value="1">
+                                                    I+
+                                                </option>
+                                                <option value="2">
+                                                    I-
+                                                </option>
+                                                <option value="3">
+                                                    II+
+                                                </option>
+                                                <option value="4">
+                                                    II-
+                                                </option>
+                                                <option value="5">
+                                                    III+
+                                                </option>
+                                                <option value="6">
+                                                    III-
+                                                </option>
+                                                <option value="7">
+                                                    IV+
+                                                </option>
+                                                <option value="8">
+                                                    IV-
+                                                </option>
+                                                <option value="9">
+                                                    Неизвестно
+                                                </option>
+                                            </select>
+                                        </div><input type="submit" value="Сохранить" class="btn btn-lg btn-save-style float-lg-right btn-radical-red"/>
+                                    </div>
+                                </form>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-7 END -->
+
+</div>
+<!-- Main container END -->
+    
+{% endblock %}

@@ -27,9 +27,9 @@ class Donation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     blood_center_id = db.Column(db.Integer, db.ForeignKey('blood_center.id'), nullable=False)
     donor_id = db.Column(db.Integer, db.ForeignKey('donor.id'), nullable=False)
-    time_type = db.Column(db.String(50), nullable=False)
     donation_cost_fk = db.Column(db.Integer, db.ForeignKey('donation_price.id'), nullable=False)
     date_time = db.Column(db.DateTime, nullable=False, default=db.func.now())
+    is_submitted = db.Column(db.BOOLEAN)
 
 
 class MedicalCenter(db.Model):
@@ -49,11 +49,13 @@ class Achievements(db.Model):
     achievement_type_id = db.Column(db.Integer, db.ForeignKey('achievement_type.id'))
     medical_center_id = db.Column(db.Integer, db.ForeignKey('medical_center.id'), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
+    rus_name = db.Column(db.String(255), nullable=True)
 
 
 class AchievementType(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), nullable=False)
+    rus_name = db.Column(db.String(255), nullable=True)
     price = db.Column(db.Integer, nullable=False)
 
 
@@ -90,6 +92,15 @@ class PendingAchievements(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     donor_id = db.Column(db.Integer, db.ForeignKey('donor.id'), nullable=False)
     achievements_id = db.Column(db.Integer, db.ForeignKey('achievements.id'), nullable=False)
+    is_submitted = db.Column(db.Integer, default=False, nullable=False)
+    data = db.Column(db.Text, nullable=False)
+
+
+class DonationTime(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    blood_center_id = db.Column(db.Integer, db.ForeignKey('blood_center.id'), nullable=False)
+    donation_time = db.Column(db.DateTime, nullable=False, default=db.func.now())
+    is_available = db.Column(db.Boolean, default=False)
 
 
 @manager.user_loader

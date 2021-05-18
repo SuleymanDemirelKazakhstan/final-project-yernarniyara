@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Preloader -->
+    <div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+    <!-- Preloader END -->
+
+
+    <!-- Main container -->
+    <div class="page-container">
+
+    {% include 'submenu-logged-in.html' %}
+
+        <!-- bloc-7 -->
+        <div class="bloc bg-Vector-2031 bgc-white-2 tc-rose-quartz" id="bloc-7">
+            <div class="container bloc-lg">
+                <div class="row">
+
+                    {% include 'left-side-profile.html' %}
+
+                    <div class="col-sm-8 col order-2 offset--1">
+                        <div class="row">
+                            <div class="col profile-block margin-tabs bgc-white-2">
+                                <h4 class="mg-md heading-edit-profile ">
+                                    Запись в Центр Крови
+                                </h4>
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        {% if data_commited == 0 %}
+                                            <form action="{{ url_for('appointment') }}" method="POST">
+                                                <div>
+                                                    <label>
+                                                        Центр крови<br>
+                                                    </label>
+                                                    <div class="form-group">
+                                                        <select class="form-control" name="blood_center"
+                                                                id="blood_center"
+                                                                {% if extra_data == 1 %}
+                                                                readonly="True"
+                                                                {% endif %}
+                                                        >
+                                                            {% if extra_data == 0 %}
+                                                                <option value="choose">
+                                                                    Выберите центр крови...
+                                                                </option>
+                                                                {% for c in blood_center %}
+                                                                    <option value="{{ c.id }}">
+                                                                        {{ c.name }}
+                                                                    </option>
+                                                                {% endfor %}
+                                                            {% endif %}
+                                                            {% if extra_data == 1 %}
+                                                                <option value="{{ selected_blood_center }}">
+                                                                    {{ selected_blood_center_name }}
+                                                                </option>
+                                                            {% endif %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    {% if extra_data == 1 %}
+                                                        <label>
+                                                            Дата и Время<br>
+                                                        </label>
+                                                    {% endif %}
+                                                    <div class="form-group">
+                                                        {% if extra_data == 1 %}
+                                                            <select class="form-control" name="date">
+                                                                {% for time in available_time %}
+                                                                    <option value="{{ time.id }}">
+                                                                        {{ time.donation_time }}
+                                                                    </option>
+                                                                {% endfor %}
+                                                            </select>
+                                                        {% endif %}
+                                                        <br>
+                                                        <p style="color: #6b223e">
+                                                            Внимание! Запись в центр крови производится для общей
+                                                            информации. Ваше время может варироваться от 5 до 15 минут в
+                                                            зависимости от наполненности центра крови
+                                                        </p>
+                                                        <input class="bloc-button btn btn-lg btn-submit-style animated pulse-hvr btn-radical-red float-lg-right"
+                                                               type="submit"
+                                                                {% if extra_data == 1 %}
+                                                               value="Записаться"
+                                                                {% else %}
+                                                               value="Далее"
+                                                                {% endif %}
+                                                        >
+                                                    </div>
+
+                                                </div>
+
+
+                                            </form>
+                                        {% endif %}
+                                        {% if data_commited == 1 %}
+                                            <div>
+                                                <br>
+                                                <p style="color: #0c5460">
+                                                    Ваша запись подтверждена
+                                                </p>
+                                                <br>
+
+                                                <p>
+                                                    Место: {{ selected_blood_center_name }}
+                                                </p>
+                                                <br>
+
+                                                <p>
+                                                    Время: {{ date_time }}
+                                                </p>
+                                                <a href="{{ url_for('profile') }}"
+                                                   class="bloc-button btn btn-lg btn-submit-style animated pulse-hvr btn-radical-red float-lg-right">Вернуться
+                                                    в профиль</a>
+                                            </div>
+
+                                            </div>
+                                        {% endif %}
+
+                                </div>
+                                {% if data_commited == 0 %}
+                                <div class="col">
+                                    <img src="static/img/lazyload-ph.png" data-src="static/img/Component%2017.png"
+                                         class="img-fluid mx-auto img-component-17-style d-lg-block   d-none lazyload"
+                                         alt="Component%2017"/>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bloc-7 END -->
+
+
+    </div>
+    <!-- Main container END -->
+{% endblock %}

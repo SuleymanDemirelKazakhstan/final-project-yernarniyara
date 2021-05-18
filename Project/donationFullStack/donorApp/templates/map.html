@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
+
+
+<!-- Main container -->
+<div class="page-container">
+
+{% if current_user.is_authenticated %}
+    {% include 'submenu-logged-in.html' %}
+{% endif %}
+
+
+<!-- bloc-10 -->
+<div class="bloc bg-Vector-2031 bgc-white-2 tc-dark-raspberry l-bloc" id="bloc-10">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="mg-md tc-radical-red h2-style text-lg-center">
+					Где сдать кровь?
+				</h2>
+				<div class="row" style="padding-bottom: 60px">
+					<div class="col-lg-6 col-md-6 col-sm-12" id="map">
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.9427961369624!2d76.9099627153987!3d43.23165898760444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3883692974e9ca83%3A0x92633183aba5c5ca!2z0JPQvtGA0L7QtNGB0LrQvtC5INCm0LXQvdGC0YAg0JrRgNC-0LLQuA!5e0!3m2!1sru!2skz!4v1620734025888!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+					</div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12" id="map" style="justify-content: center; text-align: center">
+                        <h3 style="font-weight: bold">Городской Центр Крови</h3>
+                        <h4>Адрес: Бухар-Жырау 47</h4>
+                        <h4>Время работы: 9:00 - 17:00</h4>
+
+					</div>
+				</div>
+                <div class="row" style="padding-bottom: 60px">
+					<div class="col-lg-6 col-md-6 col-sm-12">
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.9427961369624!2d76.9099627153987!3d43.23165898760444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3883692974e9ca83%3A0x92633183aba5c5ca!2z0JPQvtGA0L7QtNGB0LrQvtC5INCm0LXQvdGC0YAg0JrRgNC-0LLQuA!5e0!3m2!1sru!2skz!4v1620734025888!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+					</div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12" id="map" style="justify-content: center; text-align: center">
+                        <h3 style="font-weight: bold">Городской Центр Крови</h3>
+                        <h4>Адрес: Бухар-Жырау 47</h4>
+                        <h4>Время работы: 9:00 - 17:00</h4>
+
+					</div>
+				</div>
+                <div class="row">
+
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="text-center">
+							<a href="{{ url_for('appointment') }}" class="btn btn-lg btn-10-style btn-radical-red">Записаться<br></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-10 END -->
+
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+
+</div>
+<!-- Main container END -->
+{% endblock %}

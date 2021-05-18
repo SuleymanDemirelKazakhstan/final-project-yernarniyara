@@ -1,0 +1,76 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Preloader -->
+    <div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+    <!-- Preloader END -->
+
+
+    <!-- Main container -->
+    <div class="page-container">
+
+    <!-- bloc-5 -->
+    <div class="bloc bg-Vector-2031 tc-pale-pink l-bloc" id="bloc-5">
+        <div class="container bloc-lg">
+            <div class="row">
+                <div class="col">
+                    <div class="row row-padding-left">
+                        <div class="bloc-0-padding-top col-lg-5 border-image-login bgc-6744">
+                            <img src="static/img/lazyload-ph.png" data-src="static/img/Group%20118.png" class="img-fluid mx-auto d-block img-group-118-style lazyload" alt="Component%2018" /><img src="static/img/lazyload-ph.png" data-src="static/img/Group%20123.png" class="img-fluid mx-auto d-block img-style lazyload" alt="Group%20123" />
+                            <p class="mg-md tc-5075 text-padding-login p-text-login-page">
+                                Спаси жизнь сегодня.<br>&nbsp;Сдавай кровь и получай бонусы
+                            </p><img src="static/img/lazyload-ph.png" data-src="static/img/Group%20137.png" class="img-fluid mx-auto d-block img-group-137-style image-login-girl lazyload" alt="Group%20137" />
+                        </div>
+                        <div class="col bloc-16029-padding-top border-login-form bgc-white">
+                            <h3 class="mg-md text-lg-center text-welcome-login tc-radical-red">
+                                Добро Пожаловать!
+                            </h3>
+                            <form method="POST" action="{{ url_for('login') }}" id="form_1" data-form-type="blocs-form" novalidate data-success-msg="Успешный логин" data-fail-msg="Что-то не так">
+                                <div class="form-group">
+                                    <label for="username">
+                                        Логин
+                                    </label>
+                                    <input name="username" id="username" type="text" class="form-control" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">
+                                        Пароль
+                                    </label>
+                                    <input name="password" id="password" class="form-control" type="password" data-error-validation-msg="Неверный логин или пароль" required />
+                                </div><a href="{{ url_for('forgot_password') }}" class="a-btn a-block forgot-password-underline ltc-pale-pink">Забыли пароль?<br></a>
+                                <div class="text-center">
+                                    <input type="submit" class="bloc-button btn btn-lg btn-submit-style animated pulse-hvr btn-radical-red" value="Войти">
+
+                                </div>
+                                <div class="row voffset">
+                                    <div class="col">
+                                        <p class="p-bloc-5-style">
+                                            Еще нет учетной записи?
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <a href="{{ url_for('register_donor') }}" class="a-btn a-block ltc-radical-red">Зарегистрироваться</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bloc-5 END -->
+
+    <!-- ScrollToTop Button -->
+    <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13"/></svg></a>
+    <!-- ScrollToTop Button END-->
+
+
+    </div>
+    <!-- Main container END -->
+{% endblock %}
+
+
+

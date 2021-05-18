@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
+
+
+<!-- Main container -->
+<div class="page-container">
+
+{% include 'submenu-logged-in.html' %}
+
+
+<!-- bloc-8 -->
+<div class="bloc bg-Vector-2031 bgc-white-2 tc-dark-raspberry l-bloc" id="bloc-8">
+	<div class="container bloc-lg">
+		<div class="row">
+
+            {% include 'left-menu-edit-profile.html' %}
+
+			<div class="col-sm-8 col order-2 offset--1">
+				<div class="row">
+					<div class="col profile-block margin-tabs bgc-white-2">
+						<h3 class="mg-md p-heading-edit-profile">
+							Безопасность
+						</h3>
+						<div class="row row-41-style">
+							<div class="col-lg-12">
+                                <form action="{{ url_for('edit_password') }}" method="POST">
+                                    <div>
+                                        {% with messages = get_flashed_messages() %}
+                                            {% if messages %}
+                                                <div class="card flashes" style="align-items: center">
+                                                    <div class="card-body">
+                                                        {% for message in messages %}
+                                                            <p style="color: #6b223e; font-weight: bold;">{{ message }}</p>
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endwith %}
+                                    </div>
+                                    <div class="container-div-style">
+
+                                        <label>
+                                            Введите старый пароль<br>
+                                        </label>
+                                        <input class="form-control field-style" type="password" name="old_password"/>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            Введите новый пароль<br>
+                                        </label>
+                                        <input class="form-control field-bloc-8-style" type="password" name="new_password"/>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            Повторите новый пароль<br>
+                                        </label>
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <input class="form-control field-0-style" type="password" name="repeat_new_password"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Сохранить" class="btn btn-lg btn-save-style btn-radical-red float-lg-none"/>
+                                </form>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-8 END -->
+
+
+</div>
+<!-- Main container END -->
+    
+{% endblock %}

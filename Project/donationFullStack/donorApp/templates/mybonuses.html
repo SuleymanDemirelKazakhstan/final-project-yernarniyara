@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
+
+
+<!-- Main container -->
+<div class="page-container">
+
+<!-- bloc-7 -->
+<div class="bloc bg-Vector-2031 bgc-white-2 tc-dark-raspberry l-bloc" id="bloc-7">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="mg-md tc-radical-red h2-style text-lg-center">
+					Мои Бонусы
+				</h2>
+				<div class="row">
+					<div class="col">
+                        {% for a in donor_ach %}
+                            <button class="accordion">{{ a[1].rus_name }}</button>
+                            <div class="panel">
+                                <p>Код для получения услуги: {{ a[0].data }}</p>
+                            </div>
+                        {% endfor %}
+
+                        <script>
+                        var acc = document.getElementsByClassName("accordion");
+                        var i;
+
+                        for (i = 0; i < acc.length; i++) {
+                            acc[i].addEventListener("click", function() {
+                                this.classList.toggle("active");
+                                var panel = this.nextElementSibling;
+                                if (panel.style.display === "block") {
+                                    panel.style.display = "none";
+                                } else {
+                                    panel.style.display = "block";
+                                }
+                            });
+                        }
+                        </script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-7 END -->
+
+
+</div>
+<!-- Main container END -->
+{% endblock %}

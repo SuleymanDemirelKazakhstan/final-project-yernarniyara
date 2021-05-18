@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Preloader -->
+    <div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+    <!-- Preloader END -->
+
+
+    <!-- Main container -->
+    <div class="page-container">
+
+        <!-- bloc-7 -->
+        <div class="bloc bg-Vector-2031 bgc-white-2 tc-dark-raspberry l-bloc" id="bloc-7">
+            <div class="container bloc-lg">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="mg-md tc-radical-red h2-style text-lg-center">
+                            Часто задаваемые вопросы
+                        </h2>
+                        <div class="row">
+                            <div class="col">
+
+                                <button class="accordion">Как стать донором?</button>
+
+                                <div class="panel">
+                                    <p>Чтобы стать донором вам выбрать ближайший и удобный для вас адрес и сдать кровь.
+                                        Чтобы стать нашим участником нужно зарегистрироваться на нашем сайте.</p>
+                                </div>
+
+                                <button class="accordion">Что такое достижения?</button>
+                                <div class="panel">
+                                    <p>C достижениями можно ознакомиться в Профиле. Чтобы зарабатывать достижение
+                                        следует сдавать кровь и получать очки. Каждое достижение требует своих
+                                        требований который донор должен выполнить.</p>
+                                </div>
+
+                                <button class="accordion">Что такое Бонусы и как их получить?</button>
+                                <div class="panel">
+                                    <p>Бонусы - это специальные поощрения нашего проекта которые можно получить
+                                        зарабатывая очки после сдачи крови. Для ознакомления с бонусами нужно открыть
+                                        вкладку ‘Бонусы’ на главной странице. Необходимое и заработанное количество
+                                        баллов будет показано в заинтересованных вами бонусах. В случае достаточного
+                                        количества очков вы можете получить бонус.</p>
+                                </div>
+                                <button class="accordion">Достаточно ли у меня крови, чтобы делиться ею?</button>
+                                <div class="panel">
+                                    <p>У взрослого человека 4—5 литров крови. Во время кроводачи берут 450 мл крови —
+                                        это составляет 8% всей крови, которые восстанавливаются в течение 72 часов.
+                                        Кроводача полностью безопасна, стимулирует иммунную и кроветворную системы.</p>
+                                </div>
+                                <button class="accordion">Сколько времени занимает процедура сдачи крови?</button>
+                                <div class="panel">
+                                    <p>Когда идете сдавать цельную кровь, рассчитывайте на 1 ч 10 мин. Столько времени у
+                                        вас уйдет на заполнение анкеты, медосмотр и отдых после кроводачи. Сама
+                                        кроводача цельной крови занимает всего 5—10 минут.
+                                        Если вы сдаете плазму, то потратите 1 ч 40 мин, в т. ч. непосредственно на саму
+                                        процедуру сдачи плазмы — 40 мин.
+                                        Весь процесс сдачи тромбоцитов займет у вас 2 ч 30 мин, в т. ч. на саму сдачу —
+                                        1 ч 30 мин.
+                                    </p>
+                                </div>
+
+                                <script>
+                                    var acc = document.getElementsByClassName("accordion");
+                                    var i;
+
+                                    for (i = 0; i < acc.length; i++) {
+                                        acc[i].addEventListener("click", function () {
+                                            this.classList.toggle("active");
+                                            var panel = this.nextElementSibling;
+                                            if (panel.style.display === "block") {
+                                                panel.style.display = "none";
+                                            } else {
+                                                panel.style.display = "block";
+                                            }
+                                        });
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bloc-7 END -->
+
+
+    </div>
+    <!-- Main container END -->
+{% endblock %}

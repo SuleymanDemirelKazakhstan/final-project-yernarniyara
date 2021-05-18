@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
+
+
+<!-- Main container -->
+<div class="page-container">
+
+{% include 'submenu-logged-in.html' %}
+
+    <!-- bloc-5 -->
+    <div class="bloc bg-Vector-2031 bgc-white-2 tc-dark-raspberry l-bloc" id="bloc-5">
+        <div class="container bloc-lg">
+            <div class="row">
+
+                {% include 'left-menu-edit-profile.html' %}
+
+                <div class="col-sm-8 col order-2 offset--1">
+                    <div class="row">
+                        <div class="col profile-block margin-tabs bgc-white-2">
+                            <h3 class="mg-md p-heading-edit-profile">
+                                Основное
+                            </h3>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="static/img/lazyload-ph.png" data-src="{{ url_for('static', filename=donor_data['main_data']['profile_image']) }}" class="img-fluid mx-auto d-block img-22-style lazyload" alt="profile_image" />
+                                </div>
+                                <div class="col-lg-8">
+                                    <form action="{{ url_for('edit_profile') }}" method="POST" enctype="multipart/form-data">
+                                        <div>
+                                        <label>
+                                            Имя<br>
+                                        </label>
+                                        <input class="form-control" type="text" name="first_name" value="{{ donor_data['main_data']['first_name'] }}" required/>
+                                    </div>
+                                        <div>
+                                            <label>
+                                                Фамилия<br>
+                                            </label>
+                                            <input class="form-control" type="text" name="last_name" value="{{ donor_data['main_data']['last_name'] }}" required/>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                Пол<br>
+                                            </label>
+                                            <div class="form-group">
+                                                <select class="form-control" name="gender" required>
+                                                    {% if donor_data['main_data']['gender'] == '0' %}
+                                                        <option selected value="0">
+                                                            Мужской
+                                                        </option>
+                                                        <option value="1">
+                                                            Женский
+                                                        </option>
+                                                    {% else %}
+                                                        {% if donor_data['main_data']['gender'] == '1' %}
+                                                            <option value="0">
+                                                                Мужской
+                                                            </option>
+                                                            <option selected value="1">
+                                                                Женский
+                                                            </option>
+                                                        {% else %}
+                                                            <option value="0">
+                                                                Мужской
+                                                            </option>
+                                                            <option value="1">
+                                                                Женский
+                                                            </option>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                Возраст<br>
+                                            </label>
+                                            <input class="form-control" type="number" name="age" value="{{ donor_data['main_data']['age'] }}" required/>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                Изменить фото профиля<br>
+                                            </label>
+                                            <input class="form-control" type="file" name="profile_image"/>
+
+                                            <input class="btn btn-lg btn-save-style float-lg-right btn-radical-red" type="submit" value="Сохранить"/>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<!-- Main container END -->
+    
+{% endblock %}

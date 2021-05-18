@@ -1,0 +1,80 @@
+<div class="col-sm-4 col offset-lg-0 bgc-white-3 profile-block">
+    <a href="{{ url_for('edit_profile', username=current_user.username) }}"
+           class="btn btn-lg edit-button-profile float-lg-right btn-button-style btn-c-4135">Изменить</a>
+
+    {% if donor_data['main_data']['profile_image'] == '' %}
+        <img
+            src="static/img/lazyload-ph.png"
+            data-src="static/img/Avatar.png"
+            class="img-fluid mx-auto d-block img-bloc-7-style lazyload" alt="placeholder image"/>
+
+    {% else %}
+        <img
+            src="static/img/lazyload-ph.png"
+            data-src="{{ url_for('static', filename=donor_data['main_data']['profile_image']) }}"
+            class="img-fluid mx-auto d-block img-bloc-7-style lazyload" alt="placeholder image"/>
+    {% endif %}
+
+    <h4 class="mg-md text-lg-center h4-bloc-7-style mx-auto d-sm-block d-none ">
+            {{ donor_data['main_data']['first_name'] }}
+            {{ donor_data['main_data']['last_name'] }}
+    </h4>
+    <div class="form-group text-lg-center">
+        <label class="text-lg-center label-style hero-block">
+            Донор
+        </label>
+    </div>
+    <div class="row">
+        <div class="col-lg-7">
+            <h6 class="mg-md">
+                <span class="fa fa-coins icon-white"></span>&nbsp;Заработано баллов<br>
+            </h6>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label class="text-lg-left mg-sm points-profile">
+                    {{ donor.points }}
+                </label>
+            </div>
+        </div>
+    </div>
+    <h4 class="mg-md h4-информация-style ">
+        Информация <span class="text-edit-line">_______________________</span>
+    </h4>
+    <div class="row">
+        <div class="col" style="padding-left: 30px">
+            <h6 class="mg-md">
+                <span class="fa fa-baby-carriage icon-radical-red"></span>&nbsp;Возраст<br>
+            </h6>
+            <h6 class="mg-md">
+                <span class="fa fa-transgender icon-radical-red"></span>&nbsp;Пол<br>
+            </h6>
+            <h6 class="mg-md">
+                <span class="fa fa-arrows-alt-v icon-radical-red"></span>&nbsp;Рост<br>
+            </h6>
+            <h6 class="mg-md">
+                <span class="fa fa-weight icon-radical-red"></span>&nbsp;Вес<br>
+            </h6>
+            <h6 class="mg-md">
+                <span class="fa fa-eye-dropper icon-radical-red"></span>&nbsp;Группа крови<br>
+            </h6>
+        </div>
+        <div class="col">
+            <h6 class="mg-md heading-edit-profile">
+                {{ donor_data['main_data']['age'] }}
+            </h6>
+            <h6 class="mg-md heading-edit-profile">
+                {{ donor_data['main_data']['gender'] }}
+            </h6>
+            <h6 class="mg-md heading-edit-profile">
+                {{ donor_data['medical_data']['height'] }} см
+            </h6>
+            <h6 class="mg-md heading-edit-profile">
+                {{ donor_data['medical_data']['weight'] }} кг
+            </h6>
+            <h6 class="mg-md heading-edit-profile">
+                {{ donor_data['medical_data']['blood_type'] }}
+            </h6>
+        </div>
+    </div>
+</div>

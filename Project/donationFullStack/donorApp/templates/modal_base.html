@@ -1,0 +1,43 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" id="modalClose">&times;</span>
+            <div class="flex flex-col text-sm">
+
+                <label for="usa-description" class="font-bold mb-2">Причина отказа</label>
+                <textarea id="textarea-commentary" class="appearance-none border border-gray-200 p-2 focus:outline-none focus:border-gray-500" name="decline-reason" cols="30" rows="5"></textarea>
+            </div>
+            <button id="modalReject" type="submit"
+                                class="px-5 py-2 border-red-500 border text-red-500 rounded transition duration-300 hover:bg-red-700 hover:text-white focus:outline-none">
+                            Отклонить
+            </button>
+    </div>
+
+</div>
+
+<script>
+
+    function show_modal(elm){
+        var modal = document.getElementById("myModal");
+        var span = document.getElementById("modalClose");
+
+        modal.style.display = "block";
+
+        span.onclick = function() {
+          modal.style.display = "none";
+        };
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+
+
+
+
+</script>

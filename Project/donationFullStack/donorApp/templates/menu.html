@@ -1,0 +1,67 @@
+
+
+<!-- bloc-0 -->
+<div class="bloc l-bloc" id="bloc-0">
+    <div class="container bloc-sm">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-light row navbar-expand-md fixed-top" role="navigation" style="background-color: white; padding-left: 120px; padding-right: 100px">
+                    <a class="navbar-brand link-style ltc-ash-grey" href="index.html"><img src="static/img/Group%20118.png" alt="logo" class="mr-2" /></a>
+                    <button id="nav-toggle" type="button" class="ml-auto ui-navbar-toggler navbar-toggler border-0 p-0" data-toggle="collapse" data-target=".navbar-47762" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse navbar-47762">
+                        <ul class="site-navigation nav navbar-nav ml-auto menu-bold">
+                            <li class="nav-item">
+                                <a href="{{ url_for('main') }}" class="nav-link a-btn ltc-radical-red">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url_for('blood_map') }}" class="nav-link a-btn ltc-radical-red">Где сдать кровь?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url_for('bonuses') }}" class="nav-link a-btn ltc-radical-red">Бонусы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url_for('faq') }}" class="nav-link a-btn ltc-radical-red">FAQ</a>
+                            </li>
+                        </ul>
+                        {% if current_user.is_authenticated %}
+                            <div class="navbar-content-area d-block col-12 col-md-3 col-lg-2">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 column-bg-image">
+                                        <div class="btn-group btn-dropdown">
+                                            <a href="#" class="btn dropdown-toggle btn-lg button-logged-avatar btn-bloc-0-style " data-toggle="dropdown" aria-expanded="false">Я</a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li>
+                                                    <a href="{{ url_for('profile', username=current_user.username) }}" class="dropdown-item a-block">Мой профиль</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ url_for('edit_profile', username=current_user.username) }}" class="dropdown-item a-block">Настройки</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ url_for('logout') }}" class="dropdown-item a-block">Выйти</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="text-center">
+                                <a href="{{ url_for('login') }}">
+                                    <button class="bloc-button btn btn-lg btn-submit-style animated pulse-hvr btn-radical-red">
+									    Войти⠀⠀⠀⠀
+								    </button>
+                                </a>
+
+							</div>
+                        {% endif %}
+
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bloc-0 END -->

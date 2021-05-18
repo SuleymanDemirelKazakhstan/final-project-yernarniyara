@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if current_user.is_authenticated %}
+        {% include 'submenu-logged-in.html' %}
+    {% endif %}
+    <!-- bloc-9 -->
+    <div class="bloc bg-Vector-2031 bgc-white-2 tc-dark-raspberry l-bloc" id="bloc-9">
+        <div class="container bloc-lg">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mg-md tc-radical-red h2-style text-lg-center">
+                        Бонусы для доноров
+                    </h2>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row ">
+                                <div class="col-11 col-sm-12 col-lg-4 col-md-6">
+                                    <div class="card card-rd">
+                                        <div class="card-body bonus-rounded-edges">
+                                            <img src="static/img/lazyload-ph.png"
+                                                 data-src="static/img/17367486-lechenie-ot-alkogolizma-hlynovskiy-almaty11.png"
+                                                 class="img-fluid mx-auto d-block lazyload" alt="placeholder image"/>
+                                            <p>
+                                                Консультация психолога от MediLab
+                                            </p>
+                                            <h3 class="mg-md h3-style">
+                                                100 баллов
+                                            </h3>
+                                            {% if current_user.is_authenticated %}
+                                            <a href="{{ url_for('bonuses', bonus='psycho') }}"
+                                               class="btn btn-lg edit-button-profile float-lg-right btn-button-style btn-c-4135"
+                                               style="font-size: 14px">Взять</a>
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-11 col-sm-12 col-lg-4 order-lg-0 align-self-center col-md-6">
+                                    <div class="card card-rd">
+                                        <div class="card-body bonus-rounded-edges">
+                                            <img src="static/img/lazyload-ph.png"
+                                                 data-src="static/img/film-chest-x-ray-of-normal-human-s-chest-front-view_18981-283.png"
+                                                 class="img-fluid mx-auto d-block lazyload" alt="placeholder image"/>
+                                            <p>
+                                                Рентген от MediLab
+                                            </p>
+                                            <h3 class="mg-md h3-style">
+                                                100 баллов
+                                            </h3>
+                                            {% if current_user.is_authenticated %}
+                                            <a href="{{ url_for('bonuses', bonus='xray') }}"
+                                               class="btn btn-lg edit-button-profile float-lg-right btn-button-style btn-c-4135"
+                                               style="font-size: 14px">Взять</a>
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-11 col-sm-12 col-lg-4 order-lg-0 align-self-center col-md-6">
+                                    <div class="card card-rd">
+                                        <div class="card-body bonus-rounded-edges">
+                                            <img src="static/img/lazyload-ph.png"
+                                                 data-src="static/img/massazhist-almaty-ls-clinic.png"
+                                                 class="img-fluid mx-auto d-block lazyload" alt="placeholder image"/>
+                                            <p>
+                                                Оздоровительный массаж от MediLab
+                                            </p>
+                                            <h3 class="mg-md h3-style">
+                                                100 баллов
+                                            </h3>
+                                            {% if current_user.is_authenticated %}
+                                            <a href="{{ url_for('bonuses', bonus='massage') }}"
+                                               class="btn btn-lg edit-button-profile float-lg-right btn-button-style btn-c-4135"
+                                               style="font-size: 14px">Взять</a>
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-11 col-sm-12 col-lg-4 order-lg-0 align-self-center col-md-6">
+                                    <div class="card card-rd">
+                                        <div class="card-body bonus-rounded-edges">
+                                            <img src="static/img/lazyload-ph.png"
+                                                 data-src="static/img/oftalmolog-almaty-ls-clinic.png"
+                                                 class="img-fluid mx-auto d-block lazyload" alt="placeholder image"/>
+                                            <p>
+                                                Консультация окулиста от MediLab
+                                            </p>
+                                            <h3 class="mg-md h3-style">
+                                                100 баллов
+                                            </h3>
+                                            {% if current_user.is_authenticated %}
+                                            <a href="{{ url_for('bonuses', bonus='eyes') }}"
+                                               class="btn btn-lg edit-button-profile float-lg-right btn-button-style btn-c-4135"
+                                               style="font-size: 14px">Взять</a>
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-11 col-sm-12 col-lg-4 order-lg-0 align-self-center col-md-6">
+                                    <div class="card card-rd">
+                                        <div class="card-body bonus-rounded-edges">
+                                            <img src="static/img/lazyload-ph.png"
+                                                 data-src="static/img/uzi-organov-bryushnoy-polosti-ls-clinic-almaty.png"
+                                                 class="img-fluid mx-auto d-block lazyload" alt="placeholder image"/>
+                                            <p>
+                                                Узи брюшной полости от MediLab
+                                            </p>
+                                            <h3 class="mg-md h3-style">
+                                                100 баллов
+                                            </h3>
+                                            {% if current_user.is_authenticated %}
+                                            <a href="{{ url_for('bonuses', bonus='uzi') }}"
+                                               class="btn btn-lg edit-button-profile float-lg-right btn-button-style btn-c-4135"
+                                               style="font-size: 14px">Взять</a>
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card card-rd">
+                                        <div class="card-body bonus-rounded-edges">
+                                            <img src="static/img/lazyload-ph.png" data-src="static/img/image10.png"
+                                                 class="img-fluid mx-auto d-block lazyload" alt="placeholder image"/>
+                                            <p>
+                                                Лабораторный анализ крови от MediLab
+                                            </p>
+                                            <h3 class="mg-md h3-style">
+                                                100 баллов
+                                            </h3>
+                                            {% if current_user.is_authenticated %}
+                                                <a href="{{ url_for('bonuses', bonus='blood') }}"
+                                                   class="btn btn-lg edit-button-profile float-lg-right btn-button-style btn-c-4135"
+                                                   style="font-size: 14px">Взять</a>
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bloc-9 END -->
+
+{% endblock %}
