@@ -32,8 +32,6 @@ def profile():
         Donation.donor_id == donor.id).filter(Donation.blood_center_id == BloodCenter.id).order_by(
         Donation.id.desc()).first()
 
-    print(latest_appointment)
-
     return render_template('profile.html', title='Донор - Мой профиль', donor=donor, donor_data=donor_data,
                            latest_appointment=latest_appointment)
 
@@ -211,6 +209,7 @@ def edit_fullprofile():
 def edit_password():
     if request.method == 'POST':
         username = current_user.username
+        db_old_password = find_user(username).password
         old_password = request.form.get('old_password')
         new_password = request.form.get('new_password')
         new_password_repeat = request.form.get('new_password_repeat')
@@ -218,12 +217,17 @@ def edit_password():
         existing_username = find_user(username)
         print(existing_username)
 
+        old_password_hash = generate_password_hash(old_password)
+
         if existing_username is not None:
-            if check_password_hash(old_password, new_password):
+            print('not none')
+            if check_password_hash(old_password_hash, db_old_password):
+                print('true')
                 if new_password_repeat == new_password:
-                    print(existing_username.password)
+                    print('true')
                     existing_username.password = generate_password_hash(new_password)
                     db.session.commit()
+                    flash('Пароль успешно изменен')
             else:
                 flash('Старый пароль введен неверно')
         else:
@@ -301,6 +305,7 @@ def forgot_password():
                 print(existing_username.password)
                 existing_username.password = generate_password_hash(new_password)
                 db.session.commit()
+                return redirect(url_for('login'))
 
         else:
             flash('Не существует такого пользователя')
