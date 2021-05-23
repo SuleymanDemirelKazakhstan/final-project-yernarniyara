@@ -3,11 +3,14 @@
 + **Niyara Muradova** - Full-stack Developer (GitHub account: *niyara-muradova*)
 + **Yernar Aimagambetov** - UX/UI Designer (GitHub account: *ynr1434*)
 
+## Deployed on server code
+http://91.201.215.24:5000/
+
 ## More information could be found by the following link
 https://www.notion.so/niyara/Donor-Project-82f149cc83e847588765a31967366190
 
-##Design system for the interface
-https://www.figma.com/file/gMmR6K7jVHlbqvoWKi9fBW/Donation-Project
+## Design system for the interface
+https://www.figma.com/file/gMmR6K7jVHlbqvoWKi9fBW/Donation-Project?node-id=0%3A1
 
 ## Project
 The main goal is to design a system for health care system in order to upgrade and improve blood donation system in Kazakhstan. The system will help blood donation centers to find donors and track the donation process. Donor will be able to receive bonuses for each donation which they can spend on their medical analysis and medication.
